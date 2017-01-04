@@ -49,47 +49,13 @@ function showSlides(n) {
 };
 
 
-/*modal image*/ 
-var modal = document.getElementById('myModal');
-var frame = document.getElementsByClassName('holder')[0];
-var modalpic = document.getElementById('img01');
-
-frame.addEventListener('click', function(el) {
-  var clicked = el.target;
-  if (clicked.className === 'pics') {
-    modal.style.display = "block";
-    modalpic.src = clicked.src;
-  } else {
-    return false;
-  }
-});
-
-
-
 					
 				/*Side Nav*/
 
 function openNav() {
-    document.getElementById("mySidenav").style.width = "100%";
+    document.getElementById("mySidenav").style.width = "250px";
 }
 
 function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("mySidenav").style.width = "0";   
 }
-
-
-
-//flip card// 
-function flip(){
-  document.getElementById('card').classList.toggle('flip');
-}
-
-function flip2(){
-  document.getElementById('card2').classList.toggle('flip');
-}
-
-function flip3(){
-  document.getElementById('card3').classList.toggle('flip');
-}
-
-

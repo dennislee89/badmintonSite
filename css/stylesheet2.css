@@ -102,7 +102,10 @@ li a, .dropbtn {
  
 
                          
-#content {overflow: hidden;}
+#content {
+  overflow: hidden;
+  padding: 0 5% 5% 5%;
+}
 
 
 .column1, .column2, .column3 {
@@ -114,7 +117,7 @@ li a, .dropbtn {
 
 
 .column1:hover, .column2:hover, .column3:hover{
-  opacity: 0.5;
+  opacity: 0.9;
 }
 
 
@@ -184,7 +187,7 @@ h6 {
   /*max-width: 1840px; */
   max-width: 100%;
   position: relative;
-  
+  padding: 0 5% 0 5%;
 }
 
 
@@ -206,7 +209,12 @@ h6 {
 
 /* Position the "next button" to the right */
 .next {
-  right: 0px;
+  right: 50px;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev{
+  left: 50px;
   border-radius: 3px 0 0 3px;
 }
 
@@ -289,7 +297,7 @@ h6 {
 
                                   /*menu button*/
 #menubtn{
-    position: fixed;
+    position: absolute;
     top: 2%;
     left: 25px; 
     font-size: 2.5em;
@@ -318,7 +326,7 @@ h6 {
 .closebtn {
     position: absolute;
     top: 0;
-    right: 25px;
+    right: 15px;
     font-size: 75px;
 }
 
@@ -352,11 +360,12 @@ h3{
 /*Gallery*/
 .floater {
     display: inline-block;
-    width: 400px;
-    height: 270px;
+    width: 24%;
+    height: 300px;
     margin: 3px;
     margin-left: 0%;
-    border: 3px solid black;  
+    border: 3px solid black; 
+    text-align: center; 
 }
 
 .floater img{
@@ -401,10 +410,10 @@ h3{
 
 #close {
   position: absolute;
-  top: 100px;
-  right: 10px;
+  top: 20px;
+  right: 50px;
   color: lightblue;
-  font-size: 40px;
+  font-size: 80px;
   font-weight: bold;
   transition: 0.3s;
   cursor: pointer;
@@ -419,12 +428,25 @@ h3{
 }
 
 
-
+.galleryNav{
+  display: inline-block; 
+  float: right; 
+  margin: 30px 30px 0 0; 
+  font-size: 25px;
+}
 
 
 
                     /* Media Queries*/
 
+@media screen and (max-width: 1200px) {
+  .floater{width: 32%; height: 350px;}
+}
+
+@media screen and (max-width: 900px) {
+  .floater{width: 30%; height: 350px;}
+  #logo{display: none;}
+}
 
 
 @media screen and (max-width: 700px) {
@@ -441,8 +463,12 @@ h3{
    .prev, .next {font-size: 0;}
    div.sponsors{display: none;}
    #nav{display: none;}
-   .prev, .next {font-size: 1em;}
-   .floater{width: 300px; height: 200px;}
+   .prev, .next {display: none;}
+   .floater{width: 95%; height: 350px;}
+   #headpic{height: 300px;}
+   .column1, .column2, .column3 {float: none; width: 95%;}
+   .slideshow-container {padding: 0;}
+   nav.galleryNav{display: none;}
   }
 
 
